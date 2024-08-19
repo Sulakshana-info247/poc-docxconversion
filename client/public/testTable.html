@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Table</title>
+
+<style>
+    /* Basic styling for the table */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    table, th, td {
+      border: 1px solid black;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+
+    /* Styling for context menu */
+    .context-menu {
+      display: none;
+      position: absolute;
+      background-color: white;
+      border: 1px solid #ccc;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
+    .context-menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .context-menu li {
+      padding: 8px;
+      cursor: pointer;
+    }
+    .context-menu li:hover {
+      background-color: #f0f0f0;
+    }
+  </style>
+  </head>
+<body>
+  <div id="table-container"></div>
+  <div id="context-menu" class="context-menu">
+  <ul>
+    <li id="add-row">Add Row</li>
+    <li id="add-column">Add Column</li>
+    <li id="delete-row">Delete Row</li>
+    <li id="delete-column">Delete Column</li>
+  </ul>
+</div>
+
+  <!-- Link to the external JavaScript file -->
+  <script src="../src/EditTable.js"></script>
+</body>
+</html>
